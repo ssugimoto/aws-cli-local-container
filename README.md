@@ -1,6 +1,15 @@
 # aws-cli-local-container
+## リポジトリの説明
+- VSCodeのリモートコンテナです
+- aws-cli 最新をインストール
+- Python3.8
+- Node16
+    - nvm でインストールしている
+    - Dockerfileの「ENV NODE_VERSION 16.18.1」 をインストールしたいバージョンに変更する
+- terraform 1.3.4 をインストール（2022-11-09時点の最新）
+- コンテナ内の 実行ユーザーは `root` です
 
-## インストールされるバージョン
+## インストールされるバージョンの例
 * 2022-11-09 日本時間
 ```
 root ➜ /workspaces $ aws --version
@@ -14,8 +23,7 @@ Terraform v1.3.4
 on linux_amd64
 ```
 
-
-
+# DEMO
 ## terraform 使い方例
 
 ### EC2インスタンスを作成し起動する
@@ -139,3 +147,31 @@ provider "aws" {
 }
 ```
 
+
+# Features
+
+# Requirement
+
+# Usage
+
+- https://code.visualstudio.com/docs/devcontainers/containers
+- https://docs.rancherdesktop.io/how-to-guides/vs-code-remote-containers/
+
+0. install Docker Desktop. (or Rancher Desktop)
+    - https://code.visualstudio.com/docs/devcontainers/containers#_installation
+1. git clone or zip download
+1. open VSCode.
+1. VSCode file -> Open Folder -> Choose a git clone directory.
+    - https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-an-existing-folder-in-a-container
+1. Use the Dev Containers: Reopen in Container
+    - https://code.visualstudio.com/docs/devcontainers/containers#_reopen-folder-in-container
+1. It will automatically start building the container.
+
+# Note
+ 
+ 
+# Author
+ 
+* sugimoto
+ 
+# License
