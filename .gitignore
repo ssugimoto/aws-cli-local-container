@@ -3,3 +3,8 @@
 aws/config
 aws/credentials
 ssh/*
+
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfvars
