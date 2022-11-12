@@ -1,5 +1,5 @@
 {
-  "name": "dev03-python3.8",
+  "name": "dev-python3.9",
   "dockerFile": "Dockerfile",
   // Set *default* container specific settings.json values on container create.
   "settings": {
@@ -41,6 +41,6 @@
   "remoteUser": "root",
   // docker container name (Identify Dev Containers)
   "runArgs": [
-    "--name=python38-dev03"
+    "--name=python39-dev"
   ]
 }

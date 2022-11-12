@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/vscode/devcontainers/python:3.8
+FROM mcr.microsoft.com/vscode/devcontainers/python:3.9
 
 # see, https://gist.github.com/gsweene2/aa4229c163d500965e5674ee4418bf7a
 # see, https://gist.github.com/ssugimoto/132e0785212be58b0c0a6b4b7b42bc91
@@ -46,4 +46,11 @@ RUN mv terraform /usr/local/bin/
 # Check that it's installed
 RUN terraform --version 
 
+################################
+# Install brew
+################################
+RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+ENV PATH="/home/linuxbrew/.linuxbrew/bin:${PATH}"
+RUN brew install rain
 WORKDIR /workspaces
